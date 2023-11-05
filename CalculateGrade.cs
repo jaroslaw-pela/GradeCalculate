@@ -9,29 +9,43 @@ namespace GradeCalculate
     public class CalculateGrade
     {
 
-        public static string GradeCalculate (double percentage)
+        public static string GradeCalculate(double percentage)
         {
-            if (0 > percentage && percentage < 10)
+            if (percentage > 90 && percentage <= 100)
             {
-                return "a";
+                Console.Clear();
+                return "grade A";
             }
-            else if (0 > percentage && percentage < 10)
-            { 
-                return "b"; 
+
+            else if (80 < percentage && percentage <= 90)
+            {
+                Console.Clear();
+                return "grade B";
             }
-            else if (0 > percentage && percentage < 10)
-            { 
-                return "c";
+
+            else if (70 < percentage && percentage <= 80)
+            {
+                Console.Clear();
+                return "grade C";
             }
-            else if (0 > percentage && percentage < 10)
-            { 
-                return "d";
+
+            else if (60 < percentage && percentage <= 70)
+            {
+                Console.Clear();
+                return "grade D";
             }
-            else if (0 > percentage && percentage < 10)
-            { 
-                return "e";
+
+            else if (0 <= percentage && percentage <= 60)
+            {
+                Console.Clear();
+                return "grade D";
             }
-      
+
+            else
+            {
+                return "wartość niepoprawna";
+            }
+
         }
 
     }
